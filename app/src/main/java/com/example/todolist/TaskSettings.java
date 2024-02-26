@@ -17,9 +17,7 @@ public class TaskSettings extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
 
-        initTaskListButton();
-        initNewTaskButton();
-        initSettingsButton();
+        initNavbarButtons();
         initSettings();
         initSortByClick();
         initSortOrderClick();
@@ -27,31 +25,27 @@ public class TaskSettings extends AppCompatActivity {
 
 
     //Navigaion to maps and to settings
-    private void initTaskListButton() {
-        ImageButton newTask = findViewById(R.id.listButtonS);
-        newTask.setOnClickListener(new View.OnClickListener() {
+    private void initNavbarButtons() {
+        ImageButton taskListButton = findViewById(R.id.listButtonS);
+        ImageButton newTaskButton = findViewById(R.id.addButtonS);
+        ImageButton settingsButton = findViewById(R.id.settingsButtonS);
+
+        settingsButton.setEnabled(false);
+        taskListButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent intent = new Intent(TaskSettings.this, TaskList.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP); //clears the stack trace
                 startActivity(intent);
             }
         });
-    }
 
-    private void initNewTaskButton() {
-        ImageButton newTask = findViewById(R.id.addButtonS);
-        newTask.setOnClickListener(new View.OnClickListener() {
+        newTaskButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent intent = new Intent(TaskSettings.this, MainActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP); //clears the stack trace
                 startActivity(intent);
             }
         });
-    }
-
-    private void initSettingsButton() {
-        ImageButton ibSettings = findViewById(R.id.settingsButtonS);
-        ibSettings.setEnabled(false);
     }
 
 
