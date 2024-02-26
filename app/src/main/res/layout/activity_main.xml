@@ -70,17 +70,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/subjectInput" />
 
-    <Button
-        android:id="@+id/changeDateButton"
-        android:layout_width="111dp"
-        android:layout_height="57dp"
-        android:layout_marginEnd="20dp"
-        android:text="Change Date"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
-        app:layout_constraintVertical_bias="0.045" />
-
     <TextView
         android:id="@+id/priorityLabel"
         android:layout_width="wrap_content"
@@ -93,18 +82,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/taskInput"
         app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
-        android:id="@+id/dueLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="Due Date:"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.093"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
 
     <RadioGroup
         android:id="@+id/radioGroup"
@@ -139,17 +116,40 @@
     </RadioGroup>
 
     <TextView
+        android:id="@+id/dueLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Due Date:"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.093"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <TextView
         android:id="@+id/dateLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="32dp"
-        android:text="Date"
+        android:text=" "
         android:textSize="16sp"
         app:layout_constraintEnd_toStartOf="@+id/changeDateButton"
         app:layout_constraintHorizontal_bias="0.812"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <Button
+        android:id="@+id/changeDateButton"
+        android:layout_width="111dp"
+        android:layout_height="57dp"
+        android:layout_marginEnd="20dp"
+        android:text="Change Date"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+        app:layout_constraintVertical_bias="0.045" />
 
 
     <LinearLayout
@@ -198,5 +198,15 @@
             android:scaleType="centerInside"
             app:srcCompat="@drawable/ic_launcher_background" />
     </LinearLayout>
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:text="Save"
+        app:layout_constraintBottom_toTopOf="@+id/navbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

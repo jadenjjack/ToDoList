@@ -5,7 +5,7 @@ import java.util.Calendar;
 public class Task {
     private int taskID;
     private String subject;
-    private String item;
+    private String task;
     private String priority;
     private Calendar dueDate;
 
@@ -30,12 +30,12 @@ public class Task {
         this.subject = subject;
     }
 
-    public String getItem() {
-        return item;
+    public String getTask() {
+        return task;
     }
 
-    public void setItem(String item) {
-        this.item = item;
+    public void setTask(String task) {
+        this.task = task;
     }
 
     public String getPriority() {

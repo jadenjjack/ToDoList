@@ -30,7 +30,7 @@ public class TaskDataSource {
             ContentValues initialValues = new ContentValues();
 
             initialValues.put("subject", t.getSubject());
-            initialValues.put("item", t.getItem());
+            initialValues.put("item", t.getTask());
             initialValues.put("priority", t.getPriority());
             initialValues.put("dueDate", String.valueOf(t.getDueDate().getTimeInMillis()));
 
@@ -50,7 +50,7 @@ public class TaskDataSource {
             ContentValues updateValues = new ContentValues();
 
             updateValues.put("subject", t.getSubject());
-            updateValues.put("description", t.getItem());
+            updateValues.put("description", t.getTask());
             updateValues.put("priority", t.getPriority());
             updateValues.put("dueDate", String.valueOf(t.getDueDate().getTimeInMillis()));
 
@@ -62,7 +62,7 @@ public class TaskDataSource {
         return didSucceed;
     }
 
-    public int getLastContactID() {
+    public int getLastTaskID() {
         int lastId;
         try {
             String query = "Select MAX(_id) from tasks";
@@ -90,7 +90,7 @@ public class TaskDataSource {
                 newTask = new Task();
                 newTask.setTaskID(cursor.getInt(0));
                 newTask.setSubject(cursor.getString(1));
-                newTask.setItem(cursor.getString(2));
+                newTask.setTask(cursor.getString(2));
                 newTask.setPriority(cursor.getString(3));
 
                 Calendar calendar = Calendar.getInstance();
@@ -116,7 +116,7 @@ public class TaskDataSource {
         if(cursor.moveToFirst()) {
             task.setTaskID(cursor.getInt(0));
             task.setSubject(cursor.getString(1));
-            task.setItem(cursor.getString(2));
+            task.setTask(cursor.getString(2));
             task.setPriority(cursor.getString(3));
 
             Calendar calendar = Calendar.getInstance();
