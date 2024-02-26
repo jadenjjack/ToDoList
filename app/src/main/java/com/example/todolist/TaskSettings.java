@@ -20,7 +20,6 @@ public class TaskSettings extends AppCompatActivity {
         initTaskListButton();
         initNewTaskButton();
         initSettingsButton();
-
         initSettings();
         initSortByClick();
         initSortOrderClick();
