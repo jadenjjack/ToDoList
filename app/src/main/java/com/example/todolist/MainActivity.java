@@ -11,5 +11,5 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
-    //Test to see if it's pushing to github the right way
+    //Test to see if it's pushing to github the right wa
 }
