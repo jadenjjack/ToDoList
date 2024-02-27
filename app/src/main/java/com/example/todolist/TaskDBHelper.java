@@ -7,11 +7,11 @@ import android.util.Log;
 
 public class TaskDBHelper extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "tasks.db";
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 2;
 
     private static final String Create_Table_Task =
             "create table tasks (_id integer unique primary key autoincrement, " +
-                    "subject text not null, task text, " +
+                    "subject text not null, item text, " +
                     "priority text, dueDate text);";
 
     public TaskDBHelper(Context context) {

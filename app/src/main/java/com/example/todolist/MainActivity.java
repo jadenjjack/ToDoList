@@ -152,12 +152,11 @@ public class MainActivity extends AppCompatActivity implements DatePickerDialog.
                         if (wasSuccessful) {
                             int newId = ds.getLastTaskID();
                             currentTask.setTaskID(newId);
-                            Toast.makeText(MainActivity.this, "This Task has been saved", Toast.LENGTH_LONG).show();
-
+                            Toast.makeText(MainActivity.this, "Task added", Toast.LENGTH_LONG).show();
                         }
                     } else {
                         wasSuccessful = ds.updateTask(currentTask);
-                        Toast.makeText(MainActivity.this, "This Task has been Updated", Toast.LENGTH_LONG).show();
+                        Toast.makeText(MainActivity.this, "Task updated", Toast.LENGTH_LONG).show();
 
                     }
                     ds.close();
@@ -185,7 +184,7 @@ public class MainActivity extends AppCompatActivity implements DatePickerDialog.
 
         editSubject.setText(currentTask.getSubject());
         editDescription.setText(currentTask.getTask());
-        dueDate.setText(DateFormat.format("MM/dd/yyyy", currentTask.getDueDate().getTimeInMillis()).toString());
+        dueDate.setText(DateFormat.format("MM/dd/yyyy", currentTask.getDueDate().getTime()).toString());
 
         //setting radio button
         RadioButton high = findViewById(R.id.radioButtonHigh);

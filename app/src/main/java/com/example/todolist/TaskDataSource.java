@@ -34,7 +34,6 @@ public class TaskDataSource {
             initialValues.put("priority", t.getPriority());
             initialValues.put("dueDate", String.valueOf(t.getDueDate().getTimeInMillis()));
 
-
             didSucceed = database.insert("tasks", null, initialValues) > 0;
         }
         catch (Exception e) {
@@ -96,8 +95,8 @@ public class TaskDataSource {
                 Calendar calendar = Calendar.getInstance();
                 calendar.setTimeInMillis(Long.valueOf(cursor.getString(4)));
                 newTask.setDueDate(calendar);
-
                 tasks.add(newTask);
+
                 cursor.moveToNext();
             }
             cursor.close();
