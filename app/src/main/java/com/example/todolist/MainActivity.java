@@ -186,10 +186,10 @@ public class MainActivity extends AppCompatActivity implements DatePickerDialog.
         editDescription.setText(currentTask.getTask());
         dueDate.setText(DateFormat.format("MM/dd/yyyy", currentTask.getDueDate().getTime()).toString());
 
-        //setting radio button
-        RadioButton high = findViewById(R.id.radioButtonHigh);
-        RadioButton medium = findViewById(R.id.radioButtonMedium);
         RadioButton low = findViewById(R.id.radioButtonLow);
+        RadioButton medium = findViewById(R.id.radioButtonMedium);
+        RadioButton high = findViewById(R.id.radioButtonHigh);
+
 
         if ("High".equals(currentTask.getPriority())) {
             high.setChecked(true);

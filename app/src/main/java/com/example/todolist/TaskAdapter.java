@@ -68,7 +68,7 @@ public class TaskAdapter extends RecyclerView.Adapter {
         // this line updates the information on the viewHolder based on its position
         // (I'm assuming it has to be the last position)
         tvh.getTvSubject().setText(taskData.get(position).getSubject());
-        tvh.getTvDueDate().setText(String.valueOf(taskData.get(position).getDueDate()));
+        tvh.getTvDueDate().setText(DateFormat.format("MM/dd/yyyy", taskData.get(position).getDueDate()));
         tvh.getTvPriority().setText(taskData.get(position).getPriority());
 
         if (isDeleting) {

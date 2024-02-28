@@ -94,7 +94,7 @@
         app:layout_constraintTop_toBottomOf="@+id/taskInput">
 
         <RadioButton
-            android:id="@+id/radioButtonHigh"
+            android:id="@+id/radioButtonLow"
             android:layout_width="113dp"
             android:layout_height="49dp"
             android:text="Low"
@@ -108,7 +108,7 @@
             android:textColor="#FFE500" />
 
         <RadioButton
-            android:id="@+id/radioButtonLow"
+            android:id="@+id/radioButtonHigh"
             android:layout_width="90dp"
             android:layout_height="54dp"
             android:text="High"
@@ -154,8 +154,8 @@
 
     <LinearLayout
         android:id="@+id/navbar"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="105dp"
         android:background="@color/black"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -164,8 +164,8 @@
 
         <ImageButton
             android:id="@+id/listButton"
-            android:layout_width="110dp"
-            android:layout_height="98dp"
+            android:layout_width="115dp"
+            android:layout_height="100dp"
             android:layout_gravity="center"
             android:layout_marginLeft="30dp"
             android:layout_marginTop="15dp"
@@ -173,30 +173,30 @@
             android:layout_marginBottom="15dp"
             android:layout_weight="1"
             android:scaleType="centerInside"
-            app:srcCompat="@drawable/ic_launcher_background" />
+            app:srcCompat="@drawable/list_icon" />
 
         <ImageButton
             android:id="@+id/addButton"
             android:layout_width="115dp"
-            android:layout_height="102dp"
-            android:layout_marginTop="15dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="0dp"
             android:layout_marginRight="30dp"
             android:layout_marginBottom="15dp"
             android:layout_weight="1"
-            android:scaleType="centerInside"
-            app:srcCompat="@drawable/ic_launcher_background" />
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/add" />
 
         <ImageButton
             android:id="@+id/settingsButton"
-            android:layout_width="105dp"
-            android:layout_height="104dp"
+            android:layout_width="115dp"
+            android:layout_height="100dp"
             android:layout_gravity="center"
             android:layout_marginTop="15dp"
             android:layout_marginRight="30dp"
             android:layout_marginBottom="15dp"
             android:layout_weight="1"
             android:scaleType="centerInside"
-            app:srcCompat="@drawable/ic_launcher_background" />
+            app:srcCompat="@drawable/settings" />
     </LinearLayout>
 
     <Button
