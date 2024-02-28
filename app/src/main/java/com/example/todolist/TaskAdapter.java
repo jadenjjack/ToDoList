@@ -24,12 +24,14 @@ public class TaskAdapter extends RecyclerView.Adapter {
 
     public class TaskViewHolder extends RecyclerView.ViewHolder {
         public TextView tvSubject;
+        public TextView tvTask;
         public TextView tvDueDate;
         public TextView tvPriority;
         public Button deleteButton;
         public TaskViewHolder(@NonNull View itemView) {
             super(itemView);
             tvSubject = itemView.findViewById(R.id.textSubject);
+            tvTask = itemView.findViewById(R.id.textTask);
             tvDueDate = itemView.findViewById(R.id.textDueDate);
             tvPriority = itemView.findViewById(R.id.textPriority);
             deleteButton = itemView.findViewById(R.id.deleteTaskButton);
@@ -38,6 +40,9 @@ public class TaskAdapter extends RecyclerView.Adapter {
         }
         public TextView getTvSubject() {
             return tvSubject;
+        }
+        public TextView getTvTask() {
+            return tvTask;
         }
         public TextView getTvDueDate() {
             return tvDueDate;
@@ -64,12 +69,21 @@ public class TaskAdapter extends RecyclerView.Adapter {
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, final int position) {
+        int maxLength = 40;
         TaskViewHolder tvh = (TaskViewHolder) holder;
         // this line updates the information on the viewHolder based on its position
         // (I'm assuming it has to be the last position)
         tvh.getTvSubject().setText(taskData.get(position).getSubject());
         tvh.getTvDueDate().setText(DateFormat.format("MM/dd/yyyy", taskData.get(position).getDueDate()));
         tvh.getTvPriority().setText(taskData.get(position).getPriority());
+
+        if (taskData.get(position).getTask().length() > maxLength) {
+            // Shorten the text to the maximum length
+            String shortText = taskData.get(position).getTask().toString().substring(0, maxLength);
+            tvh.getTvTask().setText(shortText);
+        } else {
+            tvh.getTvTask().setText(taskData.get(position).getTask());
+        }
 
         if (isDeleting) {
             tvh.getDeleteButton().setVisibility(View.VISIBLE);

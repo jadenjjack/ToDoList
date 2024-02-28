@@ -49,7 +49,7 @@ public class TaskDataSource {
             ContentValues updateValues = new ContentValues();
 
             updateValues.put("subject", t.getSubject());
-            updateValues.put("description", t.getTask());
+            updateValues.put("item", t.getTask());
             updateValues.put("priority", t.getPriority());
             updateValues.put("dueDate", String.valueOf(t.getDueDate().getTimeInMillis()));
 
