@@ -5,6 +5,7 @@
     android:id="@+id/ContraintLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#2A2C30"
     tools:context=".MainActivity">
 
     <TextView
@@ -13,10 +14,26 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="New Task"
+        android:textColor="@color/white"
         android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/whiteLine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#616161"
+        android:paddingTop="1dp"
+        android:paddingBottom="1dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/newTaskText">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
         android:id="@+id/subjectLabel"
@@ -24,6 +41,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:text="Subject"
+        android:textColor="@color/white"
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/subjectInput"
         app:layout_constraintStart_toStartOf="parent"
@@ -34,12 +52,13 @@
         android:id="@+id/subjectInput"
         android:layout_width="372dp"
         android:layout_height="48dp"
-        android:layout_marginTop="40dp"
-        android:background="#DDDDDD"
+        android:layout_marginTop="72dp"
+        android:background="#757575"
         android:ems="10"
         android:hint="Subject"
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.589"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/newTaskText" />
 
@@ -50,6 +69,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginBottom="4dp"
         android:text="Task"
+        android:textColor="@color/white"
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/taskInput"
         app:layout_constraintStart_toStartOf="parent"
@@ -58,10 +78,10 @@
 
     <EditText
         android:id="@+id/taskInput"
-        android:layout_width="371dp"
-        android:layout_height="191dp"
+        android:layout_width="374dp"
+        android:layout_height="141dp"
         android:layout_marginTop="44dp"
-        android:background="#DDDDDD"
+        android:background="#757575"
         android:ems="10"
         android:gravity="start|top"
         android:hint="Describe Task"
@@ -74,14 +94,15 @@
         android:id="@+id/priorityLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="27dp"
         android:text="Priority Level"
         android:textSize="20sp"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/radioGroup"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/taskInput"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <RadioGroup
         android:id="@+id/radioGroup"
@@ -98,7 +119,8 @@
             android:layout_width="113dp"
             android:layout_height="49dp"
             android:text="Low"
-            android:textColor="#4CAF50" />
+            android:textColor="#4CAF50"
+            android:buttonTint="@color/white"/>
 
         <RadioButton
             android:id="@+id/radioButtonMedium"
@@ -121,6 +143,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:text="Due Date:"
+        android:textColor="@color/white"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.093"
@@ -134,29 +157,32 @@
         android:layout_marginTop="24dp"
         android:layout_marginEnd="32dp"
         android:text=" "
+        android:textColor="@color/white"
         android:textSize="16sp"
         app:layout_constraintEnd_toStartOf="@+id/changeDateButton"
         app:layout_constraintHorizontal_bias="0.812"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
 
+
     <Button
         android:id="@+id/changeDateButton"
         android:layout_width="111dp"
         android:layout_height="57dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/navbar_color"
+        android:radius="8dp"
         android:text="Change Date"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/radioGroup"
-        app:layout_constraintVertical_bias="0.045" />
-
+        app:layout_constraintVertical_bias="0.043" />
 
     <LinearLayout
         android:id="@+id/navbar"
         android:layout_width="match_parent"
         android:layout_height="105dp"
-        android:background="@color/black"
+        android:background="#FD3E3E3E"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -201,12 +227,14 @@
 
     <Button
         android:id="@+id/saveButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="2dp"
+        android:layout_width="112dp"
+        android:layout_height="54dp"
+        android:layout_marginBottom="20dp"
+        android:background="@color/white"
         android:text="Save"
         app:layout_constraintBottom_toTopOf="@+id/navbar"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
