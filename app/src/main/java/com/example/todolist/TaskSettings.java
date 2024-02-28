@@ -23,8 +23,6 @@ public class TaskSettings extends AppCompatActivity {
         initSortOrderClick();
     }
 
-
-    //Navigaion to maps and to settings
     private void initNavbarButtons() {
         ImageButton taskListButton = findViewById(R.id.listButtonS);
         ImageButton newTaskButton = findViewById(R.id.addButtonS);
