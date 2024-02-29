@@ -83,13 +83,13 @@ public class TaskSettings extends AppCompatActivity {
         rgSortBy.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
-                RadioButton nameRadio = findViewById(R.id.subjectRadio);
-                RadioButton cityRadio = findViewById(R.id.priorityRadio);
-                if (nameRadio.isChecked()) {
+                RadioButton subjectRadio = findViewById(R.id.subjectRadio);
+                RadioButton priorityRadio = findViewById(R.id.priorityRadio);
+                if (subjectRadio.isChecked()) {
                     getSharedPreferences("MyTaskListPreferences",
                             Context.MODE_PRIVATE).edit()
                             .putString("sortfield", "subject").apply();
-                } else if (cityRadio.isChecked()) {
+                } else if (priorityRadio.isChecked()) {
                     getSharedPreferences("MyTaskListPreferences",
                             Context.MODE_PRIVATE).edit()
                             .putString("sortfield","priority").apply();

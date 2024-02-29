@@ -103,8 +103,12 @@ public class TaskList extends AppCompatActivity {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 Boolean status = buttonView.isChecked();
-                ta.setDelete(status);
-                ta.notifyDataSetChanged();
+                if (tasks.size() > 0) {
+                    ta.setDelete(status);
+                    ta.notifyDataSetChanged();
+                } else {
+                    // do nothing
+                }
             }
         });
     }

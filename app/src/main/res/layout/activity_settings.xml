@@ -141,9 +141,10 @@
             android:layout_marginTop="15dp"
             android:layout_marginRight="30dp"
             android:layout_marginBottom="15dp"
+            android:background="#FD3E3E3E"
             android:layout_weight="1"
             android:scaleType="centerInside"
-            app:srcCompat="@drawable/list_icon" />
+            app:srcCompat="@drawable/list_icon3" />
 
         <ImageButton
             android:id="@+id/addButtonS"
@@ -152,6 +153,7 @@
             android:layout_marginTop="2dp"
             android:layout_marginRight="30dp"
             android:layout_marginBottom="15dp"
+            android:background="#FD3E3E3E"
             android:layout_weight="1"
             android:scaleType="centerInside"
             app:srcCompat="@drawable/add" />
@@ -164,6 +166,7 @@
             android:layout_marginTop="15dp"
             android:layout_marginRight="30dp"
             android:layout_marginBottom="15dp"
+            android:background="#FD3E3E3E"
             android:layout_weight="1"
             android:scaleType="centerInside"
             app:srcCompat="@drawable/settings" />
